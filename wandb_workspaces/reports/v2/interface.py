@@ -55,6 +55,7 @@ from .internal import (
     Language,
     LegendPosition,
     LinePlotStyle,
+    BarPlotStyle,
     Range,
     ReportWidth,
     SmoothingType,
@@ -2095,6 +2096,7 @@ class BarPlot(Panel):
     max_runs_to_show: Optional[int] = None
     max_bars_to_show: Optional[int] = None
     custom_expressions: Optional[LList[str]] = None
+    plot_style: Optional[BarPlotStyle] = None
     legend_template: Optional[str] = None
     font_size: Optional[FontSize] = None
     line_titles: Optional[dict] = None
@@ -2117,6 +2119,7 @@ class BarPlot(Panel):
                 limit=self.max_runs_to_show,
                 bar_limit=self.max_bars_to_show,
                 expressions=self.custom_expressions,
+                plot_style=self.plot_style,
                 legend_template=self.legend_template,
                 font_size=self.font_size,
                 override_series_titles=self.line_titles,
@@ -2142,6 +2145,7 @@ class BarPlot(Panel):
             max_runs_to_show=model.config.limit,
             max_bars_to_show=model.config.bar_limit,
             custom_expressions=model.config.expressions,
+            plot_style=model.config.plot_style,
             legend_template=model.config.legend_template,
             font_size=model.config.font_size,
             line_titles=model.config.override_series_titles,

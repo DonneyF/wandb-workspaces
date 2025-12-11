@@ -697,6 +697,7 @@ class BarPlotConfig(ReportAPIBaseModel):
     limit: Optional[int] = None
     bar_limit: Optional[int] = None
     expressions: Optional[LList[str]] = None
+    plot_style: Optional[BarPlotStyle] = None
     legend_template: Optional[str] = None
     font_size: Optional[FontSize] = None
     override_series_titles: Optional[dict] = None
